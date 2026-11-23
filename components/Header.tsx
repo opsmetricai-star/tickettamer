@@ -62,7 +62,7 @@ export function Header({ variant = "hero" }: { variant?: "hero" | "plain" }) {
         </div>
         <div className="hidden items-center gap-3 lg:flex">
           <Link href="/signin" className="btn-ghost !py-2">Sign in</Link>
-          <Link href="/get-a-demo" className="btn-dark !py-2">Get a demo</Link>
+          <Link href="/signup" className="btn-dark !py-2">Sign up</Link>
         </div>
         <button className="lg:hidden" onClick={() => setMobile(!mobile)} aria-label="Menu">{mobile ? <X /> : <Menu />}</button>
       </div>
@@ -138,7 +138,7 @@ export function Header({ variant = "hero" }: { variant?: "hero" | "plain" }) {
           {[["Customers", "/case-studies"], ["Resources", "/resources"], ["About", "/about"], ["Pricing", "/pricing"]].map(([l, h]) => (
             <Link key={h} href={h} onClick={close} className="block border-b border-black/5 py-3 text-base font-semibold">{l}</Link>
           ))}
-          <div className="mt-4 flex gap-3"><Link href="/signin" className="btn-ghost flex-1" onClick={close}>Sign in</Link><Link href="/get-a-demo" className="btn-dark flex-1" onClick={close}>Get a demo</Link></div>
+          <div className="mt-4 flex gap-3"><Link href="/signin" className="btn-ghost flex-1" onClick={close}>Sign in</Link><Link href="/signup" className="btn-dark flex-1" onClick={close}>Sign up</Link></div>
         </div>
       )}
     </header>

@@ -14,9 +14,9 @@ export function Hero() {
           <div className="relative z-10 fade-up">
             <h1 className="h-display max-w-[720px]">The AI concierge for every customer</h1>
             <p className="mt-6 max-w-[520px] text-lg text-ink/65">Build, optimize, and scale AI agents that treat every customer like the only one.</p>
-            <form action="/get-a-demo" className="mt-9 flex max-w-[530px] items-center rounded-full bg-white/45 p-2 backdrop-blur">
+            <form action="/signup"className="mt-9 flex max-w-[530px] items-center rounded-full bg-white/45 p-2 backdrop-blur">
               <input name="email" type="email" required placeholder="Work email" className="min-w-0 flex-1 bg-transparent px-5 text-base outline-none placeholder:text-ink/45" />
-              <button className="btn-dark !px-6 !py-3.5">Get a demo</button>
+              <button className="btn-dark !px-6 !py-3.5">Sign up</button>
             </form>
           </div>
           <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] items-end lg:flex"><div className="h-[520px] w-full translate-y-6"><HeroArt /></div></div>
@@ -210,7 +210,7 @@ export function BottomCTA() {
       <div className="relative overflow-hidden rounded-[28px] bg-ink px-6 py-24 text-center text-white md:rounded-[36px] md:py-32">
         <div className="pointer-events-none absolute inset-0 opacity-60" style={{ background: "radial-gradient(60% 80% at 50% 120%, #5f6fe0 0%, transparent 70%)" }} />
         <h2 className="h-section relative mx-auto max-w-[720px]">The AI concierge for every customer.</h2>
-        <div className="relative mt-10 flex justify-center gap-3"><Link href="/get-a-demo" className="btn-light">Get a demo</Link><Link href="/signup" className="btn-ghost !border-white/40 !text-white hover:!bg-white hover:!text-ink">Start free</Link></div>
+        <div className="relative mt-10 flex justify-center gap-3"><Link href="/signup" className="btn-light">Sign up</Link><Link href="/pricing" className="btn-ghost !border-white/40 !text-white hover:!bg-white hover:!text-ink">See pricing</Link></div>
       </div>
     </section>
   );

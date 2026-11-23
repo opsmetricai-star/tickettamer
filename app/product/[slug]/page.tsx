@@ -16,7 +16,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const others = products.filter((x) => x.slug !== p.slug && x.slug !== "overview").slice(0, 3);
   return (
     <Shell>
-      <PageHero eyebrow={p.group === "Duet" ? "Duet" : p.group} title={p.tagline} body={p.hero} actions={<><Demo /><Link href="/signup" className="btn-ghost">Start free</Link></>} />
+      <PageHero eyebrow={p.group === "Duet" ? "Duet" : p.group} title={p.tagline} body={p.hero} actions={<><Demo /><Link href="/pricing" className="btn-ghost">See pricing</Link></>} />
       <section className="py-24"><div className="container-x grid gap-5 md:grid-cols-2">
         {p.features.map((f, i) => (
           <Reveal key={f.title} delay={i * 80}><div className="card h-full p-8"><span className="font-mono text-xs text-brand-500">0{i + 1}</span><h3 className="mt-10 text-2xl font-medium tracking-tight">{f.title}</h3><p className="mt-3 text-ink/65">{f.body}</p></div></Reveal>

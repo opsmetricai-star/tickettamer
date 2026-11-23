@@ -51,7 +51,7 @@ export function AuthForm({ mode, configured }: { mode: Mode; configured: boolean
         {sp.get("error") === "config" && <p className="mt-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-800">The backend is not configured yet, so the app is unavailable.</p>}
         <form onSubmit={submit} className="mt-8 max-w-[400px] space-y-4">
           {mode === "signup" && <><input className="input" name="name" placeholder="Full name" required /><input className="input" name="company" placeholder="Company" /></>}
-          {mode !== "reset" && <input className="input" type="email" name="email" placeholder="Email" required autoComplete="email" />}
+          {mode !== "reset" && <input className="input" type="email" name="email" placeholder="Email" defaultValue={sp.get("email") || ""} required autoComplete="email" />}
           {mode !== "forgot" && <input className="input" type="password" name="password" placeholder={mode === "reset" ? "New password" : "Password"} required minLength={8} autoComplete={mode === "signin" ? "current-password" : "new-password"} />}
           {err && <p role="alert" className="text-sm text-red-600">{err}</p>}
           {info && <p role="status" className="text-sm text-green-700">{info}</p>}

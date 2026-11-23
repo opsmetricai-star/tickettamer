@@ -24,4 +24,4 @@ export function PageHero({ eyebrow, title, body, actions }: { eyebrow?: string; 
   );
 }
 
-export const Demo = () => <Link href="/get-a-demo" className="btn-dark">Get a demo <ArrowRight size={16} /></Link>;
+export const Demo = () => <Link href="/signup" className="btn-dark">Sign up <ArrowRight size={16} /></Link>;
