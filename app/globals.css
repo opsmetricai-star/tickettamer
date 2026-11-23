@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --ink: #0a0a0b; }
+html { scroll-behavior: smooth; }
+body { @apply bg-white text-ink antialiased; font-family: var(--font-sans), Arial, sans-serif; }
+
+@layer components {
+  .btn-dark { @apply whitespace-nowrap inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-px; box-shadow: 0 0 0 2px #fff, 0 0 0 3.5px transparent; background-image: linear-gradient(#0a0a0b,#0a0a0b), linear-gradient(90deg,#f59e8b,#7a8cee); background-origin: border-box; background-clip: padding-box, border-box; border: 2px solid transparent; }
+  .btn-ghost { @apply whitespace-nowrap inline-flex items-center justify-center gap-2 rounded-full border border-ink px-5 py-2.5 text-sm font-semibold transition hover:bg-ink hover:text-white; }
+  .btn-light { @apply whitespace-nowrap inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-ink transition hover:-translate-y-px; }
+  .link-arrow { @apply inline-flex items-center gap-1 text-sm font-semibold underline-offset-4 hover:underline; }
+  .h-display { @apply font-medium leading-[0.98] tracking-tightest; font-size: clamp(2.75rem, 6.6vw, 5.5rem); }
+  .h-section { @apply font-medium leading-[1.02] tracking-tightest; font-size: clamp(2rem, 4.4vw, 3.75rem); }
+  .eyebrow { @apply text-sm font-medium opacity-70; }
+  .container-x { @apply mx-auto w-full max-w-[1200px] px-5 md:px-8; }
+  .input { @apply w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm outline-none transition focus:border-brand-400 focus:ring-4 focus:ring-brand-100; }
+  .card { @apply rounded-2xl border border-black/5 bg-white shadow-card; }
+}
+
+.hero-bg { background: linear-gradient(180deg, #b6c7f7 0%, #93a6f1 55%, #8497ea 100%); }
+.hero-floor { background: linear-gradient(180deg, rgba(232,190,222,0) 0%, #e9bfe0 100%); }
+.fade-up { animation: fadeUp .7s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee { animation: marquee 32s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } .marquee, .fade-up { animation: none; } }
