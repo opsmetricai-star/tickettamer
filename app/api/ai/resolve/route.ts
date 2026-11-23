@@ -8,7 +8,7 @@ export const runtime = "nodejs";
 const Body = z.object({ message: z.string().min(2).max(6000), subject: z.string().max(300).optional(), ticketId: z.string().uuid().optional() });
 
 export async function POST(req: Request) {
-  if (!supabaseConfigured()) return NextResponse.json({ error: "Supabase is not configured." }, { status: 503 });
+  if (!supabaseConfigured()) return NextResponse.json({ error: "Service temporarily unavailable." }, { status: 503 });
   const parsed = Body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   const { message, subject, ticketId } = parsed.data;

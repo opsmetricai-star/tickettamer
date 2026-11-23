@@ -92,14 +92,14 @@ export function Header({ variant = "hero" }: { variant?: "hero" | "plain" }) {
                   <ArrowRight size={16} />
                 </Link>
               </div>
-              <div className="flex flex-col bg-soft p-6">
+              <Link href="/resources/customer-owned-agents-arriving" onClick={close} className="flex flex-col bg-soft p-6">
                 <div className="grid aspect-[1.7] place-items-center rounded-lg text-center text-white" style={{ background: "linear-gradient(135deg,#6a7df0,#b476e8 60%,#f08bc5)" }}>
-                  <div><p className="text-[9px] uppercase tracking-widest opacity-80">Introducing</p><p className="text-2xl font-medium leading-none">Personal Agent<br />Gateway</p></div>
+                  <div><p className="text-[9px] uppercase tracking-widest opacity-80">New research</p><p className="text-2xl font-medium leading-none">Agent<br />Gateway</p></div>
                 </div>
-                <p className="mt-4 text-sm font-semibold leading-snug">Personal agents are here. Meet them on your terms.</p>
-                <p className="mt-2 text-xs text-black/55">Detection of personal agents and a dedicated channel to serve them, with permissions you control.</p>
-                <Link href="/resources/personal-agents-are-here" onClick={close} className="mt-auto inline-flex items-center gap-1 pt-6 text-sm font-semibold">See what it can do <ArrowRight size={14} /></Link>
-              </div>
+                <p className="mt-4 text-sm font-semibold leading-snug">Customer-owned AI agents are arriving. Prepare your support operation.</p>
+                <p className="mt-2 text-xs text-black/60">How to detect third-party agents and serve them through a governed channel with explicit permissions.</p>
+                <ArrowRight size={16} className="mt-auto" />
+              </Link>
             </div>
           </div>
         )}
@@ -112,14 +112,14 @@ export function Header({ variant = "hero" }: { variant?: "hero" | "plain" }) {
         )}
         {open === "resources" && (
           <div className="pointer-events-auto ml-[46%] w-[300px] fade-up rounded-2xl bg-white p-3 shadow-pop" style={{ animationDuration: ".2s" }}>
-            {[["Resource hub", "/resources"], ["Blog", "/resources"], ["Guides", "/resources"], ["Videos", "/resources"], ["Glossary", "/glossary"], ["Case studies", "/case-studies"]].map(([l, h]) => (
+            {[["Resource hub", "/resources"], ["Glossary", "/glossary"], ["Case studies", "/case-studies"]].map(([l, h]) => (
               <Link key={l} href={h} onClick={close} className="flex items-center gap-3 rounded-xl p-2.5 text-sm font-semibold hover:bg-black/[.04]"><BookOpen size={16} className="text-brand-600" />{l}</Link>
             ))}
           </div>
         )}
         {open === "company" && (
           <div className="pointer-events-auto ml-[54%] w-[260px] fade-up rounded-2xl bg-white p-3 shadow-pop" style={{ animationDuration: ".2s" }}>
-            {[["About", "/about"], ["Pricing", "/pricing"], ["Careers", "/careers"], ["Partnerships", "/partnerships"], ["Security", "/security"]].map(([l, h]) => (
+            {[["About", "/about"], ["Pricing", "/pricing"], ["Partnerships", "/partnerships"], ["Security", "/security"]].map(([l, h]) => (
               <Link key={l} href={h} onClick={close} className="block rounded-xl p-2.5 text-sm font-semibold hover:bg-black/[.04]">{l}</Link>
             ))}
           </div>

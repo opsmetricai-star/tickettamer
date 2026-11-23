@@ -18,7 +18,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const d = productDepth[p.slug];
   return (
     <Shell>
-      <PageHero eyebrow={p.group} title={p.tagline} body={p.hero} actions={<><Demo /><Link href="/pricing" className="btn-ghost">See pricing</Link></>} />
+      <PageHero eyebrow={p.group} title={p.tagline} body={p.hero} actions={<Demo />} />
 
       {/* Example conversation + capabilities */}
       <section className="py-24"><div className="container-x grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center">

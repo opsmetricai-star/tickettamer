@@ -5,8 +5,8 @@ import "./globals.css";
 const sans = Inter_Tight({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "TicketTamer | The AI concierge for every customer",
-  description: "AI support agents that learn from your company knowledge and past tickets.",
+  title: "TicketTamer | The AI engine that resolves customer conversations at scale",
+  description: "TicketTamer analyzes tickets, predicts intent, decides the next action and automates resolution across chat, voice and email, learning from your knowledge and resolved tickets.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -15,7 +15,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
   const cs = caseStudies.filter((c) => c.industry === i.name);
   return (
     <Shell>
-      <PageHero eyebrow="Industries" title={i.name} body={`${i.tagline}. ${i.body}`} actions={<><Demo /><Link href="/pricing" className="btn-ghost">See pricing</Link></>} />
+      <PageHero eyebrow="Industries" title={i.name} body={`${i.tagline}. ${i.body}`} actions={<Demo />} />
 
       <section className="py-24"><div className="container-x">
         <Reveal><p className="eyebrow">The challenge</p><h2 className="h-section mt-4 max-w-[720px]">What makes {i.name.toLowerCase()} support hard</h2></Reveal>
@@ -40,7 +40,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
 
       <section className="py-24"><div className="container-x"><Related slugs={d.products} heading="Products teams in this industry use" /></div></section>
 
-      {cs.length > 0 && <section className="bg-soft py-20"><div className="container-x"><h2 className="h-section">Illustrative scenario</h2><div className="mt-8 grid gap-5 md:grid-cols-3">{cs.map((c) => <Link key={c.slug} href={`/case-studies/${c.slug}`} className="card p-6"><p className="text-4xl font-medium">{c.metric}</p><p className="text-sm text-ink/60">{c.label}</p><p className="mt-4 font-semibold">{c.brand}</p><p className="mt-1 text-sm text-ink/60">{c.summary}</p></Link>)}</div></div></section>}
+      {cs.length > 0 && <section className="bg-soft py-20"><div className="container-x"><h2 className="h-section">Representative scenario</h2><div className="mt-8 grid gap-5 md:grid-cols-3">{cs.map((c) => <Link key={c.slug} href={`/case-studies/${c.slug}`} className="card p-6"><p className="text-4xl font-medium">{c.metric}</p><p className="text-sm text-ink/60">{c.label}</p><p className="mt-4 font-semibold">{c.brand}</p><p className="mt-1 text-sm text-ink/60">{c.summary}</p></Link>)}</div></div></section>}
 
       <section className="py-24"><div className="container-x grid gap-12 lg:grid-cols-[1fr_1.5fr]"><div><p className="eyebrow">FAQ</p><h2 className="h-section mt-4">Common questions</h2></div><Faq items={d.faq} /></div></section>
     </Shell>

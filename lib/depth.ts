@@ -9,7 +9,7 @@ export type Depth = {
 
 export const productDepth: Record<string, Depth> = {
   voice: {
-    before: ["Callers wait in a queue for simple questions", "Agents re-verify identity on every transfer", "After-hours calls go to voicemail"],
+    before: ["Callers wait in a queue for routine questions", "Agents re-verify identity on every transfer", "After-hours calls go to voicemail"],
     after: ["Calls are answered in the first ring, any hour", "Identity is verified once and carried into any handoff", "Voicemail becomes a resolved conversation"],
     useCases: [{ title: "Order status and changes", body: "Look up an order, change an address before it ships and confirm by text." }, { title: "Appointment scheduling", body: "Find an open slot, book it and send a calendar invite while the caller is still on the line." }, { title: "Billing questions", body: "Explain a charge, offer a payment plan inside your rules and log the outcome." }],
     example: { title: "A refund call", lines: [["Customer", "Hi, I want to return the jacket I bought last week."], ["Agent", "Happy to help. Can I confirm the email on the order?"], ["Customer", "It's sam@example.com."], ["Agent", "Thanks, Sam. The jacket is within the 30-day window, so I can start the return now. You'll get a prepaid label by email in a minute."]] },

@@ -13,7 +13,7 @@ const eq = (a: string, b: string) => { const x = Buffer.from(a), y = Buffer.from
 
 export async function POST(req: Request) {
   const secret = process.env.BILLING_WEBHOOK_SECRET;
-  if (!secret) return NextResponse.json({ error: "Webhook not configured." }, { status: 503 });
+  if (!secret) return NextResponse.json({ error: "Service temporarily unavailable." }, { status: 503 });
   const given = new URL(req.url).searchParams.get("secret") || req.headers.get("x-webhook-secret") || "";
   if (!eq(given, secret)) return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
 
@@ -31,7 +31,7 @@ export async function POST(req: Request) {
   if (!["success", "successful", "paid", "completed"].includes(status)) return NextResponse.json({ ok: true, ignored: status });
 
   const admin = createAdmin();
-  if (!admin) return NextResponse.json({ error: "Server not configured." }, { status: 503 });
+  if (!admin) return NextResponse.json({ error: "Service temporarily unavailable." }, { status: 503 });
   const res = await activatePlan(admin, { email, plan, reference, raw: body });
   return NextResponse.json(res, { status: res.ok ? 200 : 202 });
 }

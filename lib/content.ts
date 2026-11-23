@@ -127,9 +127,9 @@ export const products: ProductPage[] = [
 export const industries = [
   { slug: "financial-services", name: "Financial services", tagline: "Trust in every interaction", body: "Verify identity, explain fees and handle disputes with auditable, compliant answers.", points: ["Dispute and chargeback intake", "Card controls and limits", "Compliance-ready transcripts"] },
   { slug: "travel-hospitality", name: "Travel & hospitality", tagline: "Smoother trips and stays", body: "Rebook, upgrade and resolve disruptions at the moment travelers need help.", points: ["Itinerary changes", "Loyalty questions", "Disruption outreach"] },
-  { slug: "healthcare", name: "Healthcare", tagline: "Simpler access to care", body: "Help patients schedule, understand coverage and find the right next step.", points: ["Appointment scheduling", "Coverage explanations", "Safe escalation to staff"] },
+  { slug: "healthcare", name: "Healthcare", tagline: "Faster access to care", body: "Help patients schedule, understand coverage and find the right next step.", points: ["Appointment scheduling", "Coverage explanations", "Safe escalation to staff"] },
   { slug: "technology", name: "Technology", tagline: "Better experiences at scale", body: "Support users through setup, billing and troubleshooting without growing headcount.", points: ["Account and billing help", "Guided troubleshooting", "Bug report triage"] },
-  { slug: "retail", name: "Retail", tagline: "Personalized shopping journeys", body: "Answer product questions, track orders and process returns across peak seasons.", points: ["Order status and returns", "Product recommendations", "Holiday surge handling"] },
+  { slug: "retail", name: "Retail", tagline: "Tailored shopping journeys at scale", body: "Answer product questions, track orders and process returns across peak seasons.", points: ["Order status and returns", "Product recommendations", "Holiday surge handling"] },
   { slug: "telecommunications", name: "Telecommunications", tagline: "Effortless service and connection", body: "Resolve outages, plan changes and bill questions in a single conversation.", points: ["Plan and device changes", "Outage communication", "Bill explanations"] },
   { slug: "insurance", name: "Insurance", tagline: "Claims without the complexity", body: "Guide policyholders through claims and coverage questions with clarity.", points: ["First notice of loss", "Claim status", "Policy questions"] },
 ];
@@ -145,7 +145,7 @@ export const caseStudies = [
 ];
 
 export const resources = [
-  { slug: "personal-agents-are-here", type: "Blog", title: "Personal agents are here. Meet them on your terms.", date: "Nov 2026" },
+  { slug: "customer-owned-agents-arriving", type: "Blog", title: "Customer-owned AI agents are arriving. Prepare your support operation.", date: "Nov 2026" },
   { slug: "writing-your-first-aop", type: "Guide", title: "Writing your first Agent Operating Procedure", date: "Oct 2026" },
   { slug: "measuring-ai-support", type: "Guide", title: "Measuring AI support: the five numbers that matter", date: "Oct 2026" },
   { slug: "from-tickets-to-knowledge", type: "Blog", title: "From tickets to knowledge: how agents learn from history", date: "Sep 2026" },
@@ -166,13 +166,13 @@ export const glossary: [string, string][] = [
 
 export const plans = [
   { id: "starter", name: "Starter", price: 47, url: "https://selar.com/47plan?currency=USD", popular: false,
-    blurb: "For small teams starting to automate answers.", credits: 500, sources: 25,
+    blurb: "For lean teams automating their first high-volume workflows.", credits: 500, sources: 25,
     features: ["500 AI resolutions / month", "25 knowledge sources", "Chat playground", "Ticket inbox and analytics", "Email support"] },
   { id: "growth", name: "Growth", price: 57, url: "https://selar.com/57plan?currency=USD", popular: true,
-    blurb: "For growing teams that need more volume.", credits: 2000, sources: 100,
+    blurb: "For scaling teams that need more resolutions per month.", credits: 2000, sources: 100,
     features: ["2,000 AI resolutions / month", "100 knowledge sources", "Everything in Starter", "Bulk ticket import for learning", "Priority support"] },
   { id: "scale", name: "Scale", price: 97, url: "https://selar.com/97plan?currency=USD", popular: false,
-    blurb: "For high-volume support organizations.", credits: 10000, sources: 500,
+    blurb: "For enterprise-scale support operations.", credits: 10000, sources: 500,
     features: ["10,000 AI resolutions / month", "500 knowledge sources", "Everything in Growth", "Advanced analytics", "Dedicated onboarding"] },
 ];
 

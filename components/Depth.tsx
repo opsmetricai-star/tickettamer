@@ -34,7 +34,7 @@ export function Related({ slugs, heading = "Explore related products" }: { slugs
   const items = slugs.map((s) => products.find((p) => p.slug === s)).filter(Boolean) as typeof products;
   return (
     <div><h2 className="h-section">{heading}</h2>
-      <div className="mt-10 grid gap-5 md:grid-cols-3">{items.map((o) => <Link key={o.slug} href={`/product/${o.slug}`} className="card group p-6 transition hover:-translate-y-1"><p className="text-xs text-black/50">{o.group}</p><p className="mt-10 text-2xl font-medium tracking-tight">{o.name}</p><p className="mt-1 text-sm text-ink/60">{o.tagline}</p><span className="link-arrow mt-5">Learn more <ArrowRight size={14} /></span></Link>)}</div>
+      <div className="mt-10 grid gap-5 md:grid-cols-3">{items.map((o) => <Link key={o.slug} href={`/product/${o.slug}`} className="card group p-6 transition hover:-translate-y-1"><p className="text-xs text-black/50">{o.group}</p><p className="mt-10 text-2xl font-medium tracking-tight">{o.name}</p><p className="mt-1 text-sm text-ink/60">{o.tagline}</p><ArrowRight size={18} className="mt-5 transition group-hover:translate-x-1" aria-hidden /></Link>)}</div>
     </div>
   );
 }

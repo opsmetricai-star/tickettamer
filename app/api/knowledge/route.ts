@@ -7,7 +7,7 @@ const TEXT_EXT = /\.(txt|md|csv|json|log)$/i;
 const MAX_BYTES = 2 * 1024 * 1024;
 
 export async function POST(req: Request) {
-  if (!supabaseConfigured()) return NextResponse.json({ error: "Supabase is not configured." }, { status: 503 });
+  if (!supabaseConfigured()) return NextResponse.json({ error: "Service temporarily unavailable." }, { status: 503 });
   const sb = await createSupabase();
   const { data: { user } } = await sb.auth.getUser();
   if (!user) return NextResponse.json({ error: "Not signed in." }, { status: 401 });
