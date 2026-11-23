@@ -22,7 +22,7 @@ export function Footer() {
         {col("Company", [["About", "/about"], ["Pricing", "/pricing"], ["Partnerships", "/partnerships"], ["Security", "/security"], ["Privacy", "/legal/privacy"]])}
       </div>
       <div className="container-x flex flex-col justify-between gap-2 border-t border-black/5 py-6 text-xs text-black/50 md:flex-row">
-        <span>© {new Date().getFullYear()} TicketTamer. All rights reserved.</span>
+        <span>Copyright {new Date().getFullYear()} TicketTamer. All rights reserved.</span>
         <span><Link href="/legal/privacy" className="hover:text-black">Privacy</Link> · <Link href="/security" className="hover:text-black">Security</Link></span>
       </div>
     </footer>
